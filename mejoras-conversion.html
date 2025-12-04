@@ -1,0 +1,102 @@
+<!-- Banner de Urgencia -->
+<div id="urgency-banner" class="urgency-banner">
+    <div class="urgency-content">
+        <i class="fas fa-clock"></i>
+        <span><strong>Oferta Limitada:</strong> Primeras 10 empresas obtienen análisis de automatización GRATIS (Valor ,500)</span>
+        <button class="urgency-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+            Solicitar Ahora
+        </button>
+    </div>
+</div>
+
+<!-- Sección de Prueba Social -->
+<section id="prueba-social" class="social-proof-section">
+    <h2 class="section-title gradient-text">Empresas Que Ya Están Automatizando</h2>
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-number">87%</div>
+            <div class="stat-label">Reducción en tareas manuales</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number"></div>
+            <div class="stat-label">Ahorro promedio anual</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">48h</div>
+            <div class="stat-label">Tiempo de implementación</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Empresas automatizadas</div>
+        </div>
+    </div>
+</section>
+
+<!-- Calculadora ROI -->
+<section id="calculadora-roi" class="roi-calculator-section">
+    <h2 class="section-title gradient-text">Calcula Tu Ahorro Potencial</h2>
+    <div class="calculator-container">
+        <div class="calculator-input-group">
+            <label for="empleados">Número de empleados:</label>
+            <input type="number" id="empleados" min="1" max="10000" value="10" oninput="calcularROI()">
+        </div>
+        <div class="calculator-input-group">
+            <label for="horas-manuales">Horas semanales en tareas manuales por empleado:</label>
+            <input type="number" id="horas-manuales" min="1" max="40" value="10" oninput="calcularROI()">
+        </div>
+        <div class="calculator-input-group">
+            <label for="salario-promedio">Salario promedio por hora ($):</label>
+            <input type="number" id="salario-promedio" min="1" max="500" value="25" oninput="calcularROI()">
+        </div>
+        <div class="roi-result">
+            <div class="roi-number" id="ahorro-anual"></div>
+            <div class="roi-label">Ahorro Anual Estimado con Automatización IA</div>
+            <button class="cta-button" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+                Quiero Automatizar Ahora
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Casos de Éxito -->
+<section id="casos-exito" class="success-cases-section">
+    <h2 class="section-title gradient-text">Resultados Reales de Nuestros Clientes</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-quote">
+                "En 3 meses redujimos costos operativos en 42% automatizando nuestro servicio al cliente con IA."
+            </div>
+            <div class="testimonial-author">
+                <strong>María González</strong> - CEO, TechSolutions Inc.
+            </div>
+            <div class="testimonial-stats">
+                <span class="stat-highlight">42% reducción costos</span>
+                <span class="stat-highlight">3 meses</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">
+                "Pasamos de 5 días a 2 horas en procesar órdenes. El ROI fue inmediato."
+            </div>
+            <div class="testimonial-author">
+                <strong>Carlos Ramírez</strong> - Director Operaciones, LogiPro
+            </div>
+            <div class="testimonial-stats">
+                <span class="stat-highlight">95% tiempo ahorrado</span>
+                <span class="stat-highlight">ROI en 6 semanas</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">
+                "La IA predictiva aumentó nuestras ventas en 38% al anticipar demanda con precisión."
+            </div>
+            <div class="testimonial-author">
+                <strong>Ana Martínez</strong> - VP Ventas, RetailMax
+            </div>
+            <div class="testimonial-stats">
+                <span class="stat-highlight">38% aumento ventas</span>
+                <span class="stat-highlight">2 meses implementación</span>
+            </div>
+        </div>
+    </div>
+</section>

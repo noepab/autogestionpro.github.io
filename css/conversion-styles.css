@@ -1,0 +1,276 @@
+/* Estilos para mejoras de conversión */
+
+/* Banner de Urgencia */
+.urgency-banner {
+    background: linear-gradient(90deg, #dc2626, #991b1b);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: pulse-glow 2s infinite;
+}
+
+.urgency-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.urgency-content i {
+    font-size: 1.5rem;
+    animation: tick 1s infinite;
+}
+
+.urgency-cta {
+    background: white;
+    color: #dc2626;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.urgency-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; box-shadow: 0 4px 20px rgba(220, 38, 38, 0.6); }
+}
+
+@keyframes tick {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Sección Prueba Social */
+.social-proof-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.4);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #9ca3af;
+}
+
+/* Calculadora ROI */
+.roi-calculator-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.calculator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 1.5rem;
+    padding: 3rem;
+}
+
+.calculator-input-group {
+    margin-bottom: 1.5rem;
+}
+
+.calculator-input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.calculator-input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.roi-result {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 1rem;
+}
+
+.roi-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.roi-label {
+    font-size: 1.2rem;
+    color: #d1fae5;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background: white;
+    color: #059669;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Casos de Éxito */
+.success-cases-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-left: 4px solid #10b981;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #e5e7eb;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.testimonial-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-highlight {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Chat Widget Flotante */
+.chat-widget {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: float 3s infinite;
+}
+
+.chat-widget:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.7);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .urgency-banner {
+        padding: 0.75rem 1rem;
+    }
+    
+    .urgency-content {
+        font-size: 0.875rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .roi-number {
+        font-size: 2.5rem;
+    }
+    
+    .calculator-container {
+        padding: 1.5rem;
+    }
+}
