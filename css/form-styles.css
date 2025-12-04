@@ -1,0 +1,123 @@
+/* Estilos personalizados para el formulario */
+
+/* Estilos generales para los inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(31, 41, 55, 0.7) !important;
+    border: 1px solid rgba(75, 85, 99, 0.5) !important;
+    border-radius: 0.5rem;
+    color: #f3f4f6 !important; /* text-gray-100 */
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Placeholder más claro */
+::placeholder {
+    color: #9ca3af !important; /* text-gray-400 */
+    opacity: 1;
+}
+
+/* Estilo para el foco */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6 !important; /* border-blue-500 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+    background-color: rgba(31, 41, 55, 0.9) !important;
+}
+
+/* Estilo para el select personalizado */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem !important;
+    cursor: pointer;
+}
+
+/* Estilo para las opciones del select */
+select option {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #f3f4f6; /* text-gray-100 */
+    padding: 0.5rem 1rem;
+}
+
+/* Estilo para el hover de las opciones */
+select option:hover,
+select option:focus,
+select option:checked {
+    background-color: #3b82f6 !important; /* bg-blue-500 */
+    color: white !important;
+}
+
+/* Estilo para el textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estilo para el checkbox */
+input[type="checkbox"] {
+    background-color: rgba(31, 41, 55, 0.7) !important;
+    border: 1px solid rgba(75, 85, 99, 0.5) !important;
+    border-radius: 0.25rem;
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #3b82f6 !important; /* bg-blue-500 */
+    border-color: #3b82f6 !important;
+}
+
+/* Efecto hover para los campos */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+select:hover,
+textarea:hover {
+    border-color: #6b7280 !important; /* border-gray-500 */
+}
+
+/* Estilo para las etiquetas */
+label {
+    color: #e5e7eb !important; /* text-gray-300 */
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+/* Ajustes para el contenedor del formulario */
+.contact-form-container {
+    background: rgba(17, 24, 39, 0.6) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Mejora de la legibilidad en móviles */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 1rem;
+        padding: 0.75rem 1rem !important;
+    }
+}

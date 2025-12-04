@@ -1,0 +1,27 @@
+# GitHub Pages Configuration for AutoGestionPro
+title: AutoGestionPro - Soluciones Inteligentes con IA
+description: Automatiza y escala tu negocio con soluciones de Inteligencia Artificial personalizadas
+url: https://www.autogestionpro.com
+baseurl: /
+
+# Markdown processor
+markdown: kramdown
+highlighter: rouge
+
+# Gems
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title
+
+# Exclude from processing
+exclude:
+  - .git
+  - .gitignore
+  - vendor
+  - node_modules

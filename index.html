@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self' https: data: blob:;
+      script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
+      style-src 'self' https: 'unsafe-inline';
+      img-src 'self' data: https: blob:;
+      media-src 'self' https: blob:;
+      frame-src 'self' https://www.youtube.com https://www.google.com;
+      connect-src 'self' https: wss:;
+      font-src 'self' https: data:;
+      child-src 'self' https:
+    ">
+    <meta http-equiv="Permissions-Policy" content="autoplay=(), encrypted-media=()">
+    <meta name="description" content="Automatiza y escala tu negocio con soluciones de Inteligencia Artificial personalizadas. Mejora la productividad y reduce costos con AutoGestionPro.">
+    <meta name="keywords" content="automatización, IA, inteligencia artificial, productividad, optimización, negocio, empresa, tecnología">
+    <meta name="author" content="AutoGestionPro">
+    <meta property="og:title" content="AutoGestionPro - Soluciones Inteligentes con IA">
+    <meta property="og:description" content="Transforma tu negocio con nuestras soluciones de automatización e inteligencia artificial.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://noemisanalex74.github.io/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://noemisanalex74.github.io/">
+    <title>AutoGestionPro - Soluciones Inteligentes con IA</title>
+    <link rel="icon" type="image/png" href="public/img/logo.png">
+    <!-- Preconexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Scripts optimizados -->
+    <script src="js/particles.js" defer></script>
+    <script src="video-player.js" defer></script>
+    <script src="js/modals.js" defer></script>
+    
+    <!-- Política de permisos simplificada -->
+    <meta http-equiv="Permissions-Policy" content="autoplay=*, encrypted-media=*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body class="bg-black text-white">
+    <div id="main-content-wrapper">
+        <canvas id="particles-canvas"></canvas>
+
+        <header class="header">
+            <div class="header-left-group">
+                <a href="#inicio" class="flex items-center">
+                    <img src="public/img/logo.png" alt="AutoGestionPro Logo" class="header-logo">
+                    <span class="brand-text-pro">
+                        <span class="auto-pro-part">Auto</span><span class="gestion-part">Gestion</span><span class="auto-pro-part">Pro</span>
+                    </span>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#hero" class="nav-link hover:text-blue-400 transition-colors flex items-center">
+                    <i class="fas fa-home mr-1"></i> Inicio
+                </a>
+                <a href="#beneficios-clave" class="nav-link hover:text-blue-400 transition-colors flex items-center">
+                    <i class="fas fa-star mr-1"></i> Beneficios
+                </a>
+                <a href="#soluciones-ia" class="nav-link hover:text-blue-400 transition-colors flex items-center">
+                    <i class="fas fa-lightbulb mr-1"></i> Soluciones
+                </a>
+                <a href="#empresas-exito-ia" class="nav-link hover:text-blue-400 transition-colors flex items-center">
+                    <i class="fas fa-building mr-1"></i> Empresas
+                </a>
+                <a href="#contacto" class="nav-link bg-gradient-to-r from-[#9d174d] to-[#6b1d5c] hover:from-[#be185d] hover:to-[#8b1d6b] text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center shadow-md hover:shadow-lg">
+                    <i class="fas fa-envelope mr-1"></i> Contacto
+                </a>
+            </nav>
+            <!-- Menú móvil -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </header>
+
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Tu empresa al siguiente nivel: automatiza, escala y optimiza con <span class="gradient-text">Inteligencia Artificial</span></h1>
+                <p>La plataforma inteligente que simplifica procesos, optimiza recursos y potencia el crecimiento de tu negocio.</p>
+                <p class="local-mode-text">¡Usa modo local para que tus datos sensibles no salgan de casa!</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row lg:items-stretch justify-between gap-8">
+                <!-- Columna de la imagen principal -->
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="video-container relative rounded-lg overflow-hidden shadow-2xl">
+                        <div class="video-wrapper">
+                            <video 
+                                id="main-video"
+                                class="w-full h-auto max-h-[500px] object-cover"
+                                playsinline
+                                preload="auto"
+                                muted
+                                loop
+                                autoplay
+                                webkit-playsinline
+                                x-webkit-airplay="allow"
+                                x5-video-player-type="h5"
+                                x5-video-player-fullscreen="true"
+                                x5-video-orientation="portraint"
+                                style="background-color: #000;"
+                            >
+                                <source src="./public/video/modelo_1.mp4" type="video/mp4">
+                                <source src="./public/video/modelo_1.webm" type="video/webm">
+                                <p>Tu navegador no soporta el elemento de video. Por favor, actualiza tu navegador o utiliza uno compatible.</p>
+                            </video>
+                        </div>
+                        <div class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="flex items-center justify-center space-x-4">
+                                <button id="play-pause" class="text-white hover:text-blue-400 transition-colors">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="mute-unmute" class="text-white hover:text-blue-400 transition-colors">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5" class="w-24">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm md:text-base text-gray-300">
+                        En AutoGestionPro, entendemos que cada negocio es único. Por eso, nuestras soluciones de inteligencia artificial no son de talla única. Diseñamos e implementamos sistemas de IA que se adaptan específicamente a tus necesidades, desafíos y objetivos. Desde algoritmos personalizados hasta modelos de aprendizaje profundo entrenados con tus propios datos, creamos una IA que realmente trabaja para ti, impulsando la innovación y el crecimiento de manera significativa.
+                    </p>
+                </div>
+
+                <!-- Sección de botones -->
+                <div class="w-full lg:w-2/3">
+                    <h3 class="text-2xl font-bold mb-2 text-center lg:text-left text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                        Nuestras Soluciones de IA
+                    </h3>
+                    <p class="text-gray-300 mb-6 text-center lg:text-left">Descubre cómo nuestras soluciones de IA pueden transformar tu negocio. Cada solución está diseñada para adaptarse a tus necesidades específicas.</p>
+                    <div class="grid-buttons">
+                        <!-- Botones de acción IA -->
+                        <div class="ai-action-button" data-modal="automatizacion">
+                            <i class="fas fa-robot"></i>
+                            <h3>Automatización</h3>
+                            <p>Automatiza tareas repetitivas y aumenta la productividad de tu negocio con soluciones de IA personalizadas.</p>
+                        </div>
+                        <div class="ai-action-button" data-video-id="https://youtu.be/A1DNj5dmUt0" data-title="Análisis Inteligente" data-description="La inteligencia artificial no solo automatiza, también entiende. Gracias a su capacidad para analizar grandes volúmenes de datos en tiempo real, la IA convierte información dispersa en conocimiento accionable. Ya no se trata solo de tener datos: se trata de entenderlos, descubrir patrones invisibles y tomar decisiones más inteligentes y rápidas. Desde el comportamiento de los clientes hasta el rendimiento de los equipos, todo puede ser interpretado con una profundidad que antes requería horas de análisis manual. Esta lectura inteligente abre oportunidades de mejora continua, reduce riesgos y anticipa problemas antes de que ocurran. Así, el análisis con IA no solo informa: inspira, impulsa y transforma.">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Análisis</h3>
+                            <p>Convierte datos en información valiosa con nuestro análisis predictivo y toma decisiones basadas en datos.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="seguridad">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Seguridad</h3>
+                            <p>Protege tus activos digitales con nuestras soluciones avanzadas de seguridad basadas en IA.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="optimizacion">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Optimización</h3>
+                            <p>Mejora la eficiencia de tus operaciones con herramientas de optimización impulsadas por IA.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="atencion-cliente">
+                            <i class="fas fa-headset"></i>
+                            <h3>Atención al Cliente</h3>
+                            <p>Ofrece soporte 24/7 con chatbots inteligentes que mejoran la experiencia del cliente.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="gestion-inventario">
+                            <i class="fas fa-warehouse"></i>
+                            <h3>Gestión de Inventario</h3>
+                            <p>Optimiza tus niveles de inventario y reduce costos con predicciones precisas.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="marketing-digital">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3>Marketing Digital</h3>
+                            <p>Personaliza tus campañas de marketing con análisis predictivo y segmentación avanzada.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="ventas-predictivas">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Ventas Predictivas</h3>
+                            <p>Anticipa las necesidades de tus clientes y aumenta tus ventas con IA predictiva.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="gestion-rrhh">
+                            <i class="fas fa-users"></i>
+                            <h3>Gestión de RRHH</h3>
+                            <p>Mejora la contratación y retención de talento con herramientas de IA para recursos humanos.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="logistica-distribucion">
+                            <i class="fas fa-truck"></i>
+                            <h3>Logística y Distribución</h3>
+                            <p>Optimiza tus rutas de entrega y reduce costos logísticos con IA avanzada.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="mantenimiento-predictivo">
+                            <i class="fas fa-tools"></i>
+                            <h3>Mantenimiento Predictivo</h3>
+                            <p>Prevén fallos en equipos y reduce tiempos de inactividad con IA predictiva.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="analisis-mercado">
+                            <i class="fas fa-search-dollar"></i>
+                            <h3>Análisis de Mercado</h3>
+                            <p>Descubre tendencias y oportunidades de negocio con análisis de mercado impulsados por IA.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="gestion-financiera">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Gestión Financiera</span>
+                        </div>
+                        <div class="ai-action-button" data-modal="experiencia-cliente">
+                            <i class="fas fa-smile"></i>
+                            <span>Experiencia del Cliente</span>
+                        </div>
+                        <div class="ai-action-button" data-modal="automatizacion-marketing">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Automatización de Marketing</span>
+                        </div>
+                        <div class="ai-action-button" data-modal="gestion-proyectos">
+                            <i class="fas fa-tasks"></i>
+                            <span>Gestión de Proyectos</span>
+                        </div>
+                        <div class="ai-action-button" data-modal="analisis-sentimientos">
+                            <i class="fas fa-comment-dots"></i>
+                            <span>Análisis de Sentimientos</span>
+                        </div>
+                        <div class="ai-action-button" data-modal="chatbots-avanzados">
+                            <i class="fas fa-robot"></i>
+                            <h3>Chatbots Avanzados</h3>
+                            <p>Implementa asistentes virtuales inteligentes que mejoran la interacción con tus clientes.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="gestion-conocimiento">
+                            <i class="fas fa-brain"></i>
+                            <h3>Gestión del Conocimiento</h3>
+                            <p>Organiza y aprovecha el conocimiento de tu organización con soluciones de IA.</p>
+                        </div>
+                        <div class="ai-action-button" data-modal="optimizacion-procesos">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>Optimización de Procesos</h3>
+                            <p>Automatiza y mejora tus flujos de trabajo con soluciones de IA personalizadas.</p>
+                        </div>
+                        <a href="#contacto" class="ai-action-button full-width-button" style="grid-column: 1 / -1; border: 1px dashed rgba(255,255,255,0.3); text-decoration: none;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                                <i class="fas fa-tools" style="margin: 0 10px 0 0; font-size: 1.2em;"></i>
+                                <h3 style="margin: 0; white-space: nowrap;">Soluciones Personalizadas</h3>
+                                <p style="display: inline; margin: 0 0 0 10px; font-size: 0.9em; opacity: 0.9; white-space: nowrap;">¿No encuentras lo que buscas? Desarrollamos soluciones a medida para tu negocio.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Beneficios Clave -->
+        <section id="beneficios-clave" class="benefits-section px-4 py-6">
+            <h2 class="section-title gradient-text mb-6">Beneficios Clave</h2>
+            <div class="benefits-container">
+                <button class="benefit-card" data-modal="automatizacion" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+                    <i class="fas fa-tachometer-alt benefit-icon"></i>
+                    <h3>Mayor Eficiencia</h3>
+                    <span class="sr-only">Automatiza tareas repetitivas y mejora la productividad de tu equipo.</span>
+                </button>
+                <button class="benefit-card" data-modal="decisiones" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+                    <i class="fas fa-lightbulb benefit-icon"></i>
+                    <h3>Decisiones Inteligentes</h3>
+                    <span class="sr-only">Obtén insights valiosos de tus datos para tomar decisiones más informadas.</span>
+                </button>
+                <button class="benefit-card" data-modal="ahorro" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+                    <i class="fas fa-dollar-sign benefit-icon"></i>
+                    <h3>Ahorro de Costes</h3>
+                    <span class="sr-only">Reduce gastos operativos mediante la optimización de recursos.</span>
+                </button>
+                <button class="benefit-card" data-modal="seguridad" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+                    <i class="fas fa-user-shield benefit-icon"></i>
+                    <h3>Seguridad Mejorada</h3>
+                    <span class="sr-only">Protege tus datos sensibles con tecnología de vanguardia.</span>
+                </button>
+                <button class="benefit-card" data-modal="ia-avanzada" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+                    <i class="fas fa-brain benefit-icon"></i>
+                    <h3>IA Avanzada</h3>
+                    <span class="sr-only">Potencia tu negocio con modelos de IA de última generación.</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección Cómo Empezar -->
+        <section id="como-empezar" class="px-4 py-8">
+            <h2 class="section-title gradient-text">¿Cómo Empezar con AutoGestionPro?</h2>
+            <div class="how-to-start-grid">
+                <div class="how-to-start-card">
+                    <span class="step-number">1</span>
+                    <h3>Analiza tus necesidades y Contáctanos</h3>
+                    <p>Primero analiza tus principales necesidades y tareas repetitivas, después inicia tu viaje hacia la automatización. Cuéntanos tus necesidades y objetivos.</p>
+                </div>
+                <div class="how-to-start-card">
+                    <span class="step-number">2</span>
+                    <h3>Análisis y Propuesta</h3>
+                    <p>Realizamos un análisis detallado y te presentamos una solución personalizada. ¡Gratuito solo hasta el 31 de Octubre 2025!</p>
+                </div>
+                <div class="how-to-start-card">
+                    <span class="step-number">3</span>
+                    <h3>Formación e Implementación</h3>
+                    <p>Capacitamos a tu equipo, implementamos la solución y te ofrecemos soporte continuo para garantizar el éxito.</p>
+                </div>
+            </div>
+            <div class="start-now-button-container">
+                <button class="start-now-button">¡Quiero Empezar Ahora!</button>
+            </div>
+        </section>
+
+        <!-- Sección "Empresas de éxito con IA" -->
+        <section id="empresas-exito-ia" class="px-4 py-8">
+            <h2 class="section-title gradient-text">Empresas de éxito con IA</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-2xl mx-auto">Descubre cómo empresas líderes están transformando sus operaciones y servicios con la inteligencia artificial.</p>
+            <div class="success-companies-grid">
+                <div class="company-card">
+                    <h3 class="google-company">Google</h3>
+                    <p>Integración de IA en búsqueda, asistente de voz, traducción y publicidad para una experiencia de usuario mejorada.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="amazon-company">Amazon</h3>
+                    <p>Uso de IA para recomendaciones de productos, control por voz con Alexa y optimización de su vasta red logística.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="microsoft-company">Microsoft</h3>
+                    <p>IA impulsando Azure, Copilot en Office 365, mejoras en Xbox y capacidades conversacionales en Bing Chat.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="apple-company">Apple</h3>
+                    <p>Siri, Face ID y el rendimiento eficiente de sus chips Apple Silicon, todos potenciados por IA.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="netflix-company">Netflix</h3>
+                    <p>Su avanzado sistema de recomendación de contenido, clave para la personalización del entretenimiento.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="tesla-company">Tesla</h3>
+                    <p>Liderando en conducción autónoma y la optimización inteligente de sus sistemas de baterías.</p>
+                </div>
+                <div class="company-card">
+                    <h3 class="meta-company">Meta (Facebook)</h3>
+                    <p>IA para reconocimiento facial, moderación de contenido y personalización de publicidad en sus plataformas.</p>
+                </div>
+                <div class="company-card">
+                    <h3>IBM</h3>
+                    <p>Con Watson, ofrece soluciones de IA para salud, finanzas y atención al cliente empresarial.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Salesforce</h3>
+                    <p>Einstein AI potencia su CRM, mejorando ventas y servicio al cliente con inteligencia artificial.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Adobe</h3>
+                    <p>Creative Cloud integra IA para edición inteligente y automatización en herramientas como Photoshop y Premiere Pro.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Spotify</h3>
+                    <p>Sus algoritmos de IA ofrecen recomendaciones musicales altamente personalizadas y creación de listas de reproducción.</p>
+                </div>
+                <div class="company-card">
+                    <h3>NVIDIA</h3>
+                    <p>Desarrolla GPUs y plataformas esenciales para el entrenamiento y la implementación de IA.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Intel</h3>
+                    <p>Produce chips y software de IA, ofreciendo soluciones para diversas aplicaciones empresariales.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Baidu</h3>
+                    <p>Líder en IA en China, con fuerte presencia en búsqueda, conducción autónoma (Apollo) y asistentes de voz (DuerOS).</p>
+                </div>
+                <div class="company-card">
+                    <h3>Tencent</h3>
+                    <p>Integra IA en WeChat para reconocimiento de voz y mini-programas, además de aplicaciones en gaming.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Alibaba</h3>
+                    <p>Utiliza IA para optimizar operaciones en la nube, e-commerce y logística, mejorando la eficiencia y atención al cliente.</p>
+                </div>
+                <div class="company-card">
+                    <h3>Siemens</h3>
+                    <p>Aplica IA para mantenimiento predictivo y optimización de procesos en la industria 4.0.</p>
+                </div>
+                <div class="company-card">
+                    <h3>General Electric (GE)</h3>
+                    <p>Su plataforma Predix utiliza IA para mantenimiento predictivo en turbinas y motores industriales.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="px-4 py-16">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title gradient-text text-center mb-4">Contáctanos</h2>
+                <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 px-4">¿Listo para llevar tu negocio al siguiente nivel? Envíanos un mensaje y te ayudaremos a encontrar la solución de IA perfecta para ti.</p>
+                
+                <div class="max-w-4xl mx-auto bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-700/50">
+                    <form id="solicitud-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Columna izquierda -->
+                            <div class="space-y-6">
+                                <!-- Nombre -->
+                                <div class="space-y-2">
+                                    <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo <span class="text-red-500">*</span></label>
+                                    <input type="text" id="nombre" name="nombre" required 
+                                           class="form-input"
+                                           placeholder="Tu nombre completo" aria-required="true">
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="space-y-2">
+                                    <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico <span class="text-red-500">*</span></label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="form-input"
+                                           placeholder="tucorreo@ejemplo.com" aria-required="true">
+                                </div>
+                                
+                                <!-- Servicio -->
+                                <div class="space-y-2">
+                                    <label for="servicio" class="block text-sm font-medium text-gray-300">¿En qué podemos ayudarte? <span class="text-red-500">*</span></label>
+                                    <select id="servicio" name="servicio" required aria-required="true"
+                                            class="form-select">
+                                        <option value="" disabled selected class="text-gray-300">Selecciona una opción</option>
+                                        <option value="automatizacion" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Automatización de Procesos</option>
+                                        <option value="analisis" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Análisis de Datos</option>
+                                        <option value="chatbot" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Chatbots Inteligentes</option>
+                                        <option value="desarrollo" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Desarrollo de Software</option>
+                                        <option value="consultoria" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Consultoría en IA</option>
+                                        <option value="integracion" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Integración de Sistemas</option>
+                                        <option value="marketing" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Marketing Digital con IA</option>
+                                        <option value="seguridad" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Seguridad Informática</option>
+                                        <option value="transformacion" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Transformación Digital</option>
+                                        <option value="personalizado" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Solución Personalizada</option>
+                                        <option value="otro" class="text-gray-100 bg-gray-700 hover:bg-blue-600">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Columna derecha -->
+                            <div class="space-y-6">
+                                <!-- Empresa -->
+                                <div class="space-y-2">
+                                    <label for="empresa" class="block text-sm font-medium text-gray-300">Empresa</label>
+                                    <input type="text" id="empresa" name="empresa" 
+                                           class="form-input"
+                                           placeholder="Nombre de tu empresa (opcional)">
+                                </div>
+                                
+                                <!-- Teléfono -->
+                                <div class="space-y-2">
+                                    <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" 
+                                           class="form-input"
+                                           placeholder="+34 600 000 000">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mensaje -->
+                        <div class="space-y-2">
+                            <label for="mensaje" class="block text-sm font-medium text-gray-300">Tu Mensaje <span class="text-red-500">*</span></label>
+                            <textarea id="mensaje" name="mensaje" required 
+                                     class="form-textarea"
+                                     placeholder="Cuéntanos más sobre tu proyecto y cómo podemos ayudarte..." aria-required="true"></textarea>
+                        </div>
+                        
+                        <!-- Aceptación de privacidad -->
+                        <div class="flex items-start space-x-3 pt-2">
+                            <div class="flex items-center h-5">
+                                <input type="checkbox" id="privacidad" name="privacidad" required 
+                                       class="h-4 w-4 rounded border-gray-600 bg-gray-700 focus:ring-blue-500 focus:ring-offset-gray-900"
+                                       aria-required="true">
+                            </div>
+                            <label for="privacidad" class="text-sm text-gray-300">
+                                Acepto la <a href="#" class="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-200">Política de Privacidad</a> y el 
+                                <a href="#" class="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-200">Aviso Legal</a> 
+                                <span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Botón de envío -->
+                        <div class="pt-4">
+                            <button type="submit" 
+                                    class="start-now-button w-full md:w-auto px-8 py-3.5 flex items-center justify-center space-x-2">
+                                <span>Enviar mensaje</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de video -->
+        <div id="video-modal" class="modal-overlay">
+{{ ... }}
+                <button class="modal-close-button" onclick="closeModal('video-modal')">×</button>
+{{ ... }}
+                <iframe 
+                    id="video-iframe" 
+                    src="" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    title="Video de YouTube"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+                <h3 id="video-title"></h3>
+                <p id="video-description"></p>
+            </div>
+        </div>
+
+        <!-- Modal de mensaje personalizado -->
+        <div id="custom-alert-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close-button" onclick="closeModal('custom-alert-modal')">×</button>
+                <h2 id="custom-alert-title"></h2>
+                <p id="custom-alert-message"></p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closeModal('custom-alert-modal')">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modal-title" class="modal-title"></h2>
+            <p id="modal-description" class="modal-description"></p>
+            <div class="modal-video-container">
+                <iframe id="modal-video" 
+                    width="100%" 
+                    height="500" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    title="Video explicativo">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Simplificado -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-slogan">Impulsando negocios con Inteligencia Artificial</p>
+            
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/34123456789" class="social-icon" aria-label="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <span>&copy; 2025</span>
+                <img src="public/img/logo.png" alt="AutoGestionPro" class="footer-logo">
+                <span>AutoGestionPro. Todos los derechos reservados.</span>
+            </div>
+    </footer>
+
+</body>
+</html>

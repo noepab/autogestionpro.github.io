@@ -1,0 +1,57 @@
+/* Estilos del encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    color: var(--button-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-link i {
+    color: #831843; /* Color burdeos para los iconos */
+    margin-right: 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--button-blue-hover);
+    background-color: rgba(131, 24, 67, 0.1);
+}
+
+/* Estilos para el logo y marca */
+.brand-text-pro {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.auto-pro-part {
+    color: var(--button-blue);
+}
+
+.gestion-part {
+    color: #831843; /* Color burdeos específico para 'Gestion' */
+}
+
+/* Asegurar que el body tenga espacio para el header fijo */
+body {
+    padding-top: 80px;
+}
